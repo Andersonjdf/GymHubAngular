@@ -44,5 +44,16 @@ export class GenericService {
       objUpdate
     );
   }
-
+  filterCitas(endpoint: string, params: any): Observable<any> {
+    return this.http.get<any>(this.urlAPI + endpoint, { params });
+  }
+  getCitaDetalles(id: number): Observable<any> {
+    return this.get('citas/detalle', id);
+  }
+  createCita(cita: any): Observable<any> {
+    return this.create('citas', cita);
+  }
+  updateCitaEstado(cita: any): Observable<any> {
+    return this.update('citas', cita);
+  }
 }

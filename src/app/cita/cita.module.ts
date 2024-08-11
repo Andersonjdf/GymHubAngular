@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CitaRoutingModule } from './cita-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
+import { MatNativeDateModule } from '@angular/material/core';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -18,15 +21,19 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import {MatBadgeModule} from '@angular/material/badge'; 
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import { MatListModule } from '@angular/material/list';
 import { CitaIndexComponent } from './cita-index/cita-index.component';
 import { CitaDetailComponent } from './cita-detail/cita-detail.component';
+
+import { CitaAllComponent } from './cita-all/cita-all.component';
 
 
 @NgModule({
   declarations: [
     CitaIndexComponent,
-    CitaDetailComponent
+    CitaDetailComponent,
+
+    CitaAllComponent
   ],
   imports: [
     CommonModule,
@@ -47,7 +54,10 @@ import { CitaDetailComponent } from './cita-detail/cita-detail.component';
     MatChipsModule,
     MatBadgeModule,
     MatFormFieldModule,
-    
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatListModule
   ]
 })
 export class CitaModule { }
